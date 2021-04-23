@@ -10,6 +10,7 @@ const MatchesItem = (
     {   url,
         date,
         gameId,
+        statusNum,
         hTeamWin, vTeamWin,
         hTeamScore, vTeamScore,
         hTeamName, vTeamName,
@@ -44,7 +45,9 @@ const MatchesItem = (
                                 align = 'center'
                                 color = 'textSecondary'
                                 variant = 'h6'>
-                                END
+                                { statusNum === 1 && 'EXP'}
+                                { statusNum === 2 && 'LIVE'}
+                                { statusNum === 3 && 'END'}
                             </Typography>
                         </CardContent>
                     </Grid>

@@ -16,7 +16,7 @@ const MatchesList = ({data, date}) => {
             aria-label = 'main list matches'
             className = 'matches__list'
             component = 'ul'>
-            {data.map(({gameId, hTeam, vTeam }) => (
+            {data.map(({gameId, hTeam, vTeam, statusNum }) => (
                 <MatchesItem
                     date = { date }
                     gameId = { gameId }
@@ -24,6 +24,7 @@ const MatchesList = ({data, date}) => {
                     hTeamName = { teamName(hTeam.triCode) }
                     hTeamScore = { hTeam.score }
                     hTeamWin = { hTeam.win }
+                    statusNum = { statusNum }
                     url = { url }
                     vTeamLoss = { vTeam.loss }
                     vTeamName = { teamName(vTeam.triCode) }
